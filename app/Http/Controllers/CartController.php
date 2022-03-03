@@ -62,9 +62,6 @@ class CartController extends Controller
 
     public function update($id, Request $req)
     {
-
-        
-
         $validator=Validator::make($req->all(),
         [
             'qty' => 'required|integer|min:1',

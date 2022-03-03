@@ -27,7 +27,7 @@ class JwtMiddleware
             }else if ($e instanceof \Tymon\JWTAuth\Exceptions\TokenExpiredException){
                 return response()->json(['status' => 'Token is Expired']);
             }else{
-                return response()->json([$user]);
+                return response()->json(['status' => 'Authorization token not found']);
             }
         }
         if($user && in_array($user->role, $role)){
