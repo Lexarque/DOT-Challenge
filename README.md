@@ -4,18 +4,29 @@ You can see the database design on the image below, the primary key of each tabl
 
 ![db_challenger drawio (2)](https://user-images.githubusercontent.com/72777496/156594208-4b6ca042-0ac7-409e-9759-de3f58cadda1.png)
 
-Code Screenshots : 
+To keep things short and simple, I will only post screenshots of syntaxes that is required for the Tymon JWT, since Tymon is an external dependency that Laravel doesn't provide by itself.
 
-1. Migrations  
+Here are the screenshots : 
 
-a.) games table
+1.) app\Http\Middleware\JwtMiddleware.php
 
-![ss1](https://user-images.githubusercontent.com/72777496/156596429-b8582723-b871-470f-8e6c-815b861da15b.png)
+![ss1](https://user-images.githubusercontent.com/72777496/156597889-26f82731-97a4-4a1b-a14b-902064e0c6e3.png)
 
-b.) carts table
+this file is very crucial to access the api, since the authorization must go through this middleware, and it contains 3 conditions to check the most common errors regarding JWT.
 
-![ss2](https://user-images.githubusercontent.com/72777496/156596587-be41e2ab-8f6c-46af-b307-bf2eebc84e52.png)
+2.) app\Http\Kernel.php
 
-c.) users table
+![ss2](https://user-images.githubusercontent.com/72777496/156599186-6e35adba-6ea7-4715-a932-9366c5f9d2a3.png)
 
-![ss3](https://user-images.githubusercontent.com/72777496/156596738-cf2f43a7-8116-4363-8d9a-4f7ae2da2b66.png)
+added jwt.verify inside the $routeMiddleware array so we can use it for routing the api's with authorization.
+
+3.) added 2 functions to identify the token that the subject have inside app/Models/User.php
+
+![ss3](https://user-images.githubusercontent.com/72777496/156600848-e582dbdb-88b3-4246-9e1e-82362bc4aeba.png)
+
+4.) All the functions that's added inside app/Http/Controllers/UserController.php
+    
+    a.) Login 
+    
+
+
