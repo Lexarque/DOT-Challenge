@@ -10,23 +10,29 @@ Here are the screenshots :
 
 1.) app\Http\Middleware\JwtMiddleware.php
 
-![ss1](https://user-images.githubusercontent.com/72777496/156597889-26f82731-97a4-4a1b-a14b-902064e0c6e3.png)
-
 this file is very crucial to access the api, since the authorization must go through this middleware, and it contains 3 conditions to check the most common errors regarding JWT.
+
+![ss1](https://user-images.githubusercontent.com/72777496/156597889-26f82731-97a4-4a1b-a14b-902064e0c6e3.png)
 
 2.) app\Http\Kernel.php
 
-![ss2](https://user-images.githubusercontent.com/72777496/156599186-6e35adba-6ea7-4715-a932-9366c5f9d2a3.png)
-
 added jwt.verify inside the $routeMiddleware array so we can use it for routing the api's with authorization.
+
+![ss2](https://user-images.githubusercontent.com/72777496/156599186-6e35adba-6ea7-4715-a932-9366c5f9d2a3.png)
 
 3.) added 2 functions to identify the token that the subject have inside app/Models/User.php
 
 ![ss3](https://user-images.githubusercontent.com/72777496/156600848-e582dbdb-88b3-4246-9e1e-82362bc4aeba.png)
 
 4.) All the functions that's added inside app/Http/Controllers/UserController.php
-    
+
     a.) Login 
+
+    ![ss4](https://user-images.githubusercontent.com/72777496/156602217-87b751d1-1c49-467a-a6bc-3eba2dca572d.png)
+
+    b.) Register
+
+
     
 
 
