@@ -21,7 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     Route::post('/register', 'UserController@register');
     Route::get('/getAuth', 'UserController@getAuthenticatedUser');
 
- Route::group(['middleware' => ['jwt.verify:*']], function(){
+ Route::group(['middleware' => ['jwt.verify:admin,staff,customer']], function(){
     
     Route::group(['middleware' => ['jwt.verify:admin,staff']], function(){
         Route::post('/games', 'GamesController@store');
