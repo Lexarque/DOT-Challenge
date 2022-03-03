@@ -4,6 +4,10 @@ You can see the database design on the image below, the primary key of each tabl
 
 ![db_challenger drawio (2)](https://user-images.githubusercontent.com/72777496/156594208-4b6ca042-0ac7-409e-9759-de3f58cadda1.png)
 
+And also you can check the full API documentation on the link below : 
+
+https://documenter.getpostman.com/view/17535083/UVksMZqq
+
 To keep things short and simple, I will only post screenshots of syntaxes that is required for the Tymon JWT, since Tymon is an external dependency that Laravel doesn't provide by itself.
 
 Here are the screenshots : 
@@ -26,11 +30,25 @@ added jwt.verify inside the $routeMiddleware array so we can use it for routing 
 
 4.) All the functions that's added inside app/Http/Controllers/UserController.php
 
-    a.) Login 
+-> a.) Login 
 
-    ![ss4](https://user-images.githubusercontent.com/72777496/156602217-87b751d1-1c49-467a-a6bc-3eba2dca572d.png)
+![ss4](https://user-images.githubusercontent.com/72777496/156602217-87b751d1-1c49-467a-a6bc-3eba2dca572d.png)
 
-    b.) Register
+-> b.) Register
+
+![ss5](https://user-images.githubusercontent.com/72777496/156602572-aadcb1cd-31df-4611-9b3c-de1970b120d5.png)
+
+-> c.) getAuthenticatedUser
+
+![ss6](https://user-images.githubusercontent.com/72777496/156602670-46d635e9-a055-42b1-9156-9b84b3777e2b.png)
+
+5.) new aliases that is added inside config/app.php
+
+![ss7](https://user-images.githubusercontent.com/72777496/156603137-41161530-eae0-4507-92a1-0325c44e9285.png)
+
+
+
+
 
 
     
